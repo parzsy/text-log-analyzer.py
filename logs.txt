@@ -1,0 +1,10 @@
+[INFO] User Sue logged in 
+[ERROR] File not found
+[WARNING] Low disk space
+[INFO] User Sue logged out
+[INFO] User Sophie logged in
+[WARNING] High memory usage detected
+[ERROR] Database connection failed
+[INFO] User Sophie updated profile settings
+[ERROR] Could not write to log file 
+[WARNING] Attempted access to deprecated endpoint
