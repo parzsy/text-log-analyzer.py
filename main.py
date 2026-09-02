@@ -16,31 +16,23 @@ for log in logs:
     level = log["level"] 
     counts[level] +=1
 
-error_logs = []
-user_in_msg = []
-disk_in_msg = []
-warning_and_coffee= []
+keyword = "User"
 
-#checks for ERROR as level and adds to list
-for log in logs:
-    if log["level"] == "ERROR":
-        error_logs.append(log)
+def search_logs(keyword):
+    keyword = keyword.lower()
+    results = []
+    for log in logs:
+        if keyword in log["message"].lower():
+            results.append(log)
+            print(f"[{log['level']}] {log['message']}")
+    return results
 
-#checks for User in the msg and adds to list
-for log in logs:
-    if "User" in log["message"]:
-        user_in_msg.append(log)
+search_logs("User")
 
-#checks for disk in msg and adds to list
-for log in logs:
-    if "disk" in log["message"]:
-        disk_in_msg.append(log)
 
-#checks for WARNING as level and coffee in msg and adds to list
-for log in logs:
-    if log["level"] == "WARNING" and "coffee" in log["message"]:
-        warning_and_coffee.append(log)
-print(warning_and_coffee)
+
+
+
         
 
 
